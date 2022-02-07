@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="photo_mp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Главный экран">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -26,7 +26,7 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-jx-ISP">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-jx-ISP">
                                 <rect key="frame" x="193" y="98" width="211" height="37"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,14 +35,21 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-fw-Yre">
+                                <rect key="frame" x="0.0" y="145" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gEG-jx-ISP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="0HF-CO-GtE"/>
+                            <constraint firstItem="hAQ-fw-Yre" firstAttribute="top" secondItem="xSb-Nk-R9h" secondAttribute="bottom" constant="10" id="FlV-I2-lf9"/>
                             <constraint firstItem="xSb-Nk-R9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="S7C-47-8H0"/>
+                            <constraint firstItem="hAQ-fw-Yre" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cCJ-Ij-UHU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAQ-fw-Yre" secondAttribute="trailing" id="f4M-Fk-Uj7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gEG-jx-ISP" secondAttribute="trailing" constant="10" id="grT-S7-D7G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gEG-jx-ISP" secondAttribute="trailing" constant="10" id="nMR-gf-edN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hAQ-fw-Yre" secondAttribute="bottom" id="hQX-m6-OtD"/>
                             <constraint firstItem="xSb-Nk-R9h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zia-fz-ElR"/>
                         </constraints>
                     </view>
