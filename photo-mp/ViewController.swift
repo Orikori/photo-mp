@@ -24,8 +24,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
         PhotoPicker.dismiss(animated: true, completion: nil)
-      // imageView.image = editingInfo![UIImagePickerControllerOriginalImage] as? UIImage
+        
+      
+        //imageView.image = editingInfo![UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
     }
     
     
