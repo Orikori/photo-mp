@@ -13,7 +13,7 @@
 		EE7E721927B160A600FBDA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7E721727B160A600FBDA15 /* Main.storyboard */; };
 		EE7E721B27B160AD00FBDA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7E721A27B160AD00FBDA15 /* Assets.xcassets */; };
 		EE7E721E27B160AD00FBDA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7E721C27B160AD00FBDA15 /* LaunchScreen.storyboard */; };
-		EE7E722727B16FAE00FBDA15 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E722627B16FAE00FBDA15 /* Actions.swift */; };
+		EE7E722727B16FAE00FBDA15 /* DocsPickerTypes .swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E722627B16FAE00FBDA15 /* DocsPickerTypes .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		EE7E721A27B160AD00FBDA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE7E721D27B160AD00FBDA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE7E721F27B160AD00FBDA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE7E722627B16FAE00FBDA15 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		EE7E722627B16FAE00FBDA15 /* DocsPickerTypes .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocsPickerTypes .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		EE7E722527B16A1400FBDA15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE7E722627B16FAE00FBDA15 /* Actions.swift */,
+				EE7E722627B16FAE00FBDA15 /* DocsPickerTypes .swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE7E721627B160A600FBDA15 /* ViewController.swift in Sources */,
-				EE7E722727B16FAE00FBDA15 /* Actions.swift in Sources */,
+				EE7E722727B16FAE00FBDA15 /* DocsPickerTypes .swift in Sources */,
 				EE7E721227B160A600FBDA15 /* AppDelegate.swift in Sources */,
 				EE7E721427B160A600FBDA15 /* SceneDelegate.swift in Sources */,
 			);

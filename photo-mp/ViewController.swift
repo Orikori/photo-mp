@@ -7,12 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    @IBAction func makePhoto(_ sender: Any) {
+    @IBOutlet weak var tableView: UITableView!
+    var PhotoPicker: UIImagePickerController!
+    
+    @IBAction func takePhoto(_ sender: Any) {
+        
+        PhotoPicker = UIImagePickerController()
+        PhotoPicker.delegate = self
+        PhotoPicker.sourceType = .camera
+        PhotoPicker.allowsEditing = true
+        
+        present(PhotoPicker, animated: true, completion: nil)
         
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        PhotoPicker.dismiss(animated: true, completion: nil)
+      // imageView.image = editingInfo![UIImagePickerControllerOriginalImage] as? UIImage
+    }
     
     
     override func viewDidLoad() {
