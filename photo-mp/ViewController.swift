@@ -48,7 +48,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 }
 
 extension ViewController:UITableViewDataSource, UITableViewDelegate {
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100
     }
@@ -62,6 +65,10 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
         cell!.textLabel?.text = "Название файла"
         cell!.imageView?.image = UIImage(named: "default.png")
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Файлы"
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
