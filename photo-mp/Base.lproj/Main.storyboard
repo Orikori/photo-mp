@@ -68,6 +68,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="image" destination="OSF-07-9nW" id="neN-ej-jIG"/>
+                                            <outlet property="imageFile2" destination="OSF-07-9nW" id="KIU-FF-yHa"/>
                                             <outlet property="title" destination="Vxb-d5-mG9" id="i8O-zk-u1o"/>
                                         </connections>
                                     </tableViewCell>

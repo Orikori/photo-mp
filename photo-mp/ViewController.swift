@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    let idCell = "fileCeil"
+    
     @IBOutlet weak var tableView: UITableView!
     var PhotoPicker: UIImagePickerController!
+    
     
     @IBAction func takePhoto(_ sender: Any) {
         
@@ -34,9 +37,27 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        
+        
     }
 
 
 }
 
+extension ViewController:UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
+        cell.textLabel?.text = "Название файла"
+        cell.imageView?.image = UIImage(named: "default.png")
+        return cell
+    }
+    
+    
+}
