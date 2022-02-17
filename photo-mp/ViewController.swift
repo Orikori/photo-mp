@@ -39,6 +39,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         
     }
@@ -46,18 +47,28 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
 }
 
-extension ViewController:UITableViewDataSource {
+extension ViewController:UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
-        cell.textLabel?.text = "Название файла"
-        cell.imageView?.image = UIImage(named: "default.png")
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: idCell)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
+        }
+        
+        cell!.textLabel?.text = "Название файла"
+        cell!.imageView?.image = UIImage(named: "default.png")
+        return cell!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("\(indexPath.row)")
+    }
 }
