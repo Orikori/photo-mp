@@ -11,7 +11,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     let idCell = "fileCeil"
     
-    var files: [String] = ["Tom", "Alice", "Kate"]
+    //var files: [File] = [File(title: "File1"), File(title: "File2")]
+    var files: [File] = []
     
     @IBOutlet weak var tableView: UITableView!
     var PhotoPicker: UIImagePickerController!
@@ -23,19 +24,26 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         PhotoPicker.delegate = self
         PhotoPicker.sourceType = .camera
         PhotoPicker.allowsEditing = true
-        
+                
         present(PhotoPicker, animated: true, completion: nil)
-        
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-        PhotoPicker.dismiss(animated: true, completion: nil)
-        
-      
-        //imageView.image = editingInfo![UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
-    }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        print("didFinishPickingImage")
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let file = File(
+                title: "Изображение с камеры",
+                imageFile: pickedImage
+            )
+
+            files.insert(file, at: files.count)
+            tableView.reloadData()
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +72,8 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
             cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
         }
         
-        cell!.textLabel?.text = files[indexPath.row]
-        cell!.imageView?.image = UIImage(named: "default.png")
+        cell!.textLabel?.text = files[indexPath.row].title
+        cell!.imageView?.image = files[indexPath.row].imageFile != nil ? files[indexPath.row].imageFile : UIImage(named: "default.png")
         return cell!
     }
     
@@ -81,3 +89,5 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
         //print("\(indexPath.row)")
     }
 }
+
+
