@@ -37,6 +37,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Выбрать из галереи">
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="takeFromGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMN-0u-n79"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-fw-Yre">
                                 <rect key="frame" x="0.0" y="144.5" width="414" height="717.5"/>

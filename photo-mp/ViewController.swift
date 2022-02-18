@@ -6,16 +6,28 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     let idCell = "fileCeil"
-    
-    //var files: [File] = [File(title: "File1"), File(title: "File2")]
+
     var files: [File] = []
     
     @IBOutlet weak var tableView: UITableView!
     var PhotoPicker: UIImagePickerController!
+    
+    
+    @IBAction func takeFromGallery(_ sender: Any) {
+        PhotoPicker = UIImagePickerController()
+        PhotoPicker.delegate = self
+        //PhotoPicker.sourceType = .photoLibrary
+        PhotoPicker.sourceType = .savedPhotosAlbum
+
+        PhotoPicker.allowsEditing = true
+                
+        present(PhotoPicker, animated: true, completion: nil)
+    }
     
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -30,11 +42,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        print("didFinishPickingImage")
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            var name = "Изображение"
+            if let asset = info[UIImagePickerController.InfoKey.phAsset] as? PHAsset, let fileName = asset.value(forKey: "filename") as? String {
+                name = fileName
+            }
+            
             let file = File(
-                title: "Изображение с камеры",
+                title: name,
                 imageFile: pickedImage
             )
 
