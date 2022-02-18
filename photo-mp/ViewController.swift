@@ -23,7 +23,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         PhotoPicker.delegate = self
         //PhotoPicker.sourceType = .photoLibrary
         PhotoPicker.sourceType = .savedPhotosAlbum
-
         PhotoPicker.allowsEditing = true
                 
         present(PhotoPicker, animated: true, completion: nil)
@@ -68,6 +67,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         tableView.delegate = self
         
         
+        let cellTypeNib = UINib(nibName: "FileViewCell", bundle: nil)
+        tableView.register(cellTypeNib, forCellReuseIdentifier: "FileViewCell")
     }
 
 
@@ -102,7 +103,10 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("\(indexPath.row)")
+
+        performSegue(withIdentifier: "toApiScreen", sender: nil)
+        
+        
     }
 }
 

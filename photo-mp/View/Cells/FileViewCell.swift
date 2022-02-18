@@ -1,14 +1,15 @@
 //
-//  TableViewCell.swift
+//  FileViewCell.swift
 //  photo-mp
 //
-//  Created by Дмитрий Артемьев on 08.02.2022.
+//  Created by Дмитрий Артемьев on 18.02.2022.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
+class FileViewCell: UITableViewCell {
+    
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var imageFile: UIImageView!
     
@@ -22,5 +23,5 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
