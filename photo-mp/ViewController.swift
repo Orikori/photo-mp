@@ -11,6 +11,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     let idCell = "fileCeil"
     
+    var files: [String] = ["Tom", "Alice", "Kate"]
+    
     @IBOutlet weak var tableView: UITableView!
     var PhotoPicker: UIImagePickerController!
     
@@ -53,7 +55,7 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return files.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +64,7 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
             cell = UITableViewCell(style: .default, reuseIdentifier: idCell)
         }
         
-        cell!.textLabel?.text = "Название файла"
+        cell!.textLabel?.text = files[indexPath.row]
         cell!.imageView?.image = UIImage(named: "default.png")
         return cell!
     }
@@ -72,7 +74,7 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        return 75.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
