@@ -11,10 +11,12 @@ import Alamofire
 class SecondViewController: UIViewController {
     
     let idCell = "SecondViewCell"
+    let source = "http://data.fixer.io/api/latest"
+    let key = "6995b6761f17972a65482c529847b900"
     
     @IBOutlet weak var tableView: UITableView!
     
-    var list: [String] = ["111", "222", "333"]
+    var list: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,19 @@ class SecondViewController: UIViewController {
         
         let cellTypeNib = UINib(nibName: "SecondViewCell", bundle: nil)
         tableView.register(cellTypeNib, forCellReuseIdentifier: "SecondViewCell")
+        
+        getPrice(url: source + "?access_key=" + key)
 
         // Do any additional setup after loading the view.
     }
     
+}
+
+func getPrice(url: String) {
+    AF.request(url).responseJSON {response in
+        print(response)
+    }
+
 }
 
 
