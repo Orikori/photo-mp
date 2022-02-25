@@ -21,7 +21,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func takeFromGallery(_ sender: Any) {
         PhotoPicker = UIImagePickerController()
         PhotoPicker.delegate = self
-        //PhotoPicker.sourceType = .photoLibrary
         PhotoPicker.sourceType = .savedPhotosAlbum
         PhotoPicker.allowsEditing = true
                 
