@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE4741E227C8E27D0070895E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4741D227C8DB3F0070895E /* Alamofire.framework */; };
+		EE4741E327C8E27D0070895E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE4741D227C8DB3F0070895E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE7E721227B160A600FBDA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721127B160A600FBDA15 /* AppDelegate.swift */; };
 		EE7E721427B160A600FBDA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721327B160A600FBDA15 /* SceneDelegate.swift */; };
 		EE7E721627B160A600FBDA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721527B160A600FBDA15 /* ViewController.swift */; };
@@ -81,6 +83,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EE4741E427C8E27D0070895E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EE4741E327C8E27D0070895E /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EE4741C627C8DB3E0070895E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		EE7E720E27B160A500FBDA15 /* photo-mp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photo-mp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4741E227C8E27D0070895E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +141,13 @@
 				EE4741E027C8DB3F0070895E /* Alamofire watchOS Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EE4741E127C8E27D0070895E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EE69423827B2A717005883DE /* View */ = {
@@ -151,6 +175,7 @@
 				EE4741C627C8DB3E0070895E /* Alamofire.xcodeproj */,
 				EE7E721027B160A500FBDA15 /* photo-mp */,
 				EE7E720F27B160A500FBDA15 /* Products */,
+				EE4741E127C8E27D0070895E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +223,7 @@
 				EE7E720A27B160A500FBDA15 /* Sources */,
 				EE7E720B27B160A500FBDA15 /* Frameworks */,
 				EE7E720C27B160A500FBDA15 /* Resources */,
+				EE4741E427C8E27D0070895E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
