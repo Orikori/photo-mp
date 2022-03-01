@@ -11,6 +11,7 @@
 		EE4741E327C8E27D0070895E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE4741D227C8DB3F0070895E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE47421727C919EA0070895E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE47420A27C918F50070895E /* SwiftyJSON.framework */; };
 		EE47421827C919EA0070895E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE47420A27C918F50070895E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE47421A27C92A330070895E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47421927C92A330070895E /* Currency.swift */; };
 		EE7E721227B160A600FBDA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721127B160A600FBDA15 /* AppDelegate.swift */; };
 		EE7E721427B160A600FBDA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721327B160A600FBDA15 /* SceneDelegate.swift */; };
 		EE7E721627B160A600FBDA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E721527B160A600FBDA15 /* ViewController.swift */; };
@@ -152,6 +153,7 @@
 /* Begin PBXFileReference section */
 		EE4741C627C8DB3E0070895E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		EE4741FE27C918F50070895E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		EE47421927C92A330070895E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		EE7E720E27B160A500FBDA15 /* photo-mp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photo-mp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7E721127B160A600FBDA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE7E721327B160A600FBDA15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				EE7E722627B16FAE00FBDA15 /* DocsPickerTypes .swift */,
 				EEC3D1AF27BFA1FA00CDE6C1 /* File.swift */,
+				EE47421927C92A330070895E /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE47421A27C92A330070895E /* Currency.swift in Sources */,
 				EEC3D1B527BFE48A00CDE6C1 /* FileViewCell.swift in Sources */,
 				EE7E721627B160A600FBDA15 /* ViewController.swift in Sources */,
 				EE7E722727B16FAE00FBDA15 /* DocsPickerTypes .swift in Sources */,

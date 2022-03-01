@@ -7,6 +7,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
 
 class SecondViewController: UIViewController {
     
@@ -18,7 +20,7 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var list: [String] = []
+    var list: [Currency] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +42,36 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-}
+    func getPrice(url: String, parameters: [String: String]) {
+        AF.request(url, parameters: parameters).responseJSON {response in
+            switch response.result {
+                case .success(let value):
+                let json = JSON(value)
+                    self.getRates(json: json)
+                    break
+                case .failure(let error):
+                    print(error)
+            }
+            
+            self.tableView.reloadData()
+        }
 
-func getPrice(url: String, parameters: [String: String]) {
-    AF.request(url, parameters: parameters).responseJSON {response in
-        print(response)
     }
-
+    
+    func getRates(json: JSON) {
+        for (name, price) in json["rates"] {
+            let curr = Currency(
+                title: name,
+                rate: price.stringValue
+            )
+            list.append(curr)
+        }
+        
+    }
+    
 }
+
+
 
 
 
@@ -63,8 +87,8 @@ extension SecondViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecondViewCell", for: indexPath) as! SecondViewCell
         
-        cell.title.text = list[indexPath.row]
-        cell.body.text = list[indexPath.row]
+        cell.title.text = list[indexPath.row].title
+        cell.body.text = list[indexPath.row].rate
         
         return cell
     }
