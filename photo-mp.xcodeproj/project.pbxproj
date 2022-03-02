@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE05CFEA27CFE6C3005D4D00 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05CFE927CFE6C3005D4D00 /* DetailViewController.swift */; };
 		EE4741E227C8E27D0070895E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4741D227C8DB3F0070895E /* Alamofire.framework */; };
 		EE4741E327C8E27D0070895E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE4741D227C8DB3F0070895E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE47421727C919EA0070895E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE47420A27C918F50070895E /* SwiftyJSON.framework */; };
@@ -151,6 +152,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE05CFE927CFE6C3005D4D00 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EE4741C627C8DB3E0070895E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		EE4741FE27C918F50070895E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		EE47421927C92A330070895E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				EE7E721A27B160AD00FBDA15 /* Assets.xcassets */,
 				EE7E721C27B160AD00FBDA15 /* LaunchScreen.storyboard */,
 				EE7E721F27B160AD00FBDA15 /* Info.plist */,
+				EE05CFE927CFE6C3005D4D00 /* DetailViewController.swift */,
 			);
 			path = "photo-mp";
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				EE7E721227B160A600FBDA15 /* AppDelegate.swift in Sources */,
 				EEC3D1B227BFDE6400CDE6C1 /* SecondViewController.swift in Sources */,
 				EEC3D1B027BFA1FA00CDE6C1 /* File.swift in Sources */,
+				EE05CFEA27CFE6C3005D4D00 /* DetailViewController.swift in Sources */,
 				EEC3D1B927BFEFA300CDE6C1 /* SecondViewCell.swift in Sources */,
 				EE7E721427B160A600FBDA15 /* SceneDelegate.swift in Sources */,
 			);
