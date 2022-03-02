@@ -18,6 +18,9 @@ class SecondViewController: UIViewController {
     let base = "EUR"
     let currency = "USD,RUB"
     
+    var titleDetail = ""
+    var textDetail = ""
+    
     @IBOutlet weak var tableView: UITableView!
     
     var list: [Currency] = []
@@ -40,6 +43,28 @@ class SecondViewController: UIViewController {
         getPrice(url: source, parameters: params)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let detailController = DetailViewController()
+        
+        
+        titleDetail = list[indexPath.row].title
+        textDetail = list[indexPath.row].rate
+        
+        performSegue(withIdentifier: "showDetail", sender: nil)
+        
+        
+    }
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailController = segue.destination as? DetailViewController {
+
+            detailController.titleDetail = titleDetail
+            detailController.textDetail = textDetail
+        }
     }
     
     func getPrice(url: String, parameters: [String: String]) {

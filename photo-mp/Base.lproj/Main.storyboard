@@ -192,6 +192,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jD9-to-od4"/>
+                    <connections>
+                        <outlet property="currency" destination="mYc-fO-hpM" id="Khm-nm-Yef"/>
+                        <outlet property="rate" destination="VET-sz-zbA" id="cOt-T9-fsp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHD-rp-oJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

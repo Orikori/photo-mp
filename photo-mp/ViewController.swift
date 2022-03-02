@@ -101,12 +101,7 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
         return 75.0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        performSegue(withIdentifier: "toApiScreen", sender: nil)
-        
-        
-    }
 }
 
 
