@@ -48,9 +48,6 @@ class SecondViewController: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let detailController = DetailViewController()
-        
-        
         titleDetail = list[indexPath.row].title
         textDetail = list[indexPath.row].rate
         
