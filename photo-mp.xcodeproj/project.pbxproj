@@ -201,13 +201,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE4741E127C8E27D0070895E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EE4741FF27C918F50070895E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +241,6 @@
 				EE4741C627C8DB3E0070895E /* Alamofire.xcodeproj */,
 				EE7E721027B160A500FBDA15 /* photo-mp */,
 				EE7E720F27B160A500FBDA15 /* Products */,
-				EE4741E127C8E27D0070895E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

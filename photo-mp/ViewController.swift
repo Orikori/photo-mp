@@ -14,6 +14,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     var files: [File] = []
     
+    @IBOutlet weak var button: UIButton!
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     var PhotoPicker: UIImagePickerController!
     
@@ -66,8 +70,26 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         tableView.delegate = self
         
         
+    
+        
         let cellTypeNib = UINib(nibName: "FileViewCell", bundle: nil)
         tableView.register(cellTypeNib, forCellReuseIdentifier: "FileViewCell")
+        
+        
+        let colors = [
+            UIColor(red: 1/255, green: 109/255, blue: 255/255, alpha: 1.0).cgColor,
+            UIColor(red: 0, green: 82/255, blue: 255/255, alpha: 1.0).cgColor
+        ]
+        
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.cornerRadius = 12
+        gradientLayer.colors = colors
+        gradientLayer.transform = CATransform3DMakeRotation(270 / 180 * CGFloat.pi, 0, 0, 1)
+        gradientLayer.frame = button.bounds
+
+        button.layer.insertSublayer(gradientLayer, at: 0)
+        button.layer.cornerRadius = 12
     }
 
 
@@ -103,5 +125,4 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate {
     
 
 }
-
 
